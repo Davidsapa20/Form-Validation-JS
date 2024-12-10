@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Contact form</title>
+
+    <style>
+        /*General Reset*/
+        
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #eaf5ef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100hv;
+        }
+        /* Form General Reset */
+        
+        #form-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        /* form h3 */
+        
+        .form-section h3 {
+            margin-left: -5px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        /*first and last name section  */
+        
+        .name-section {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .input-name {
+            padding: 10px 40px;
+            border-radius: 5px;
+        }
+        /* Email section */
+        
+        .emailAddress {
+            padding: 10px 175px;
+            border-radius: 5px;
+        }
+        
+        .label-address {
+            margin-right: 400px;
+        }
+        /* query Type section*/
+        
+        .queryType-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .radio-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 8px 70px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #fff;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .radio-container input[type="radio"]:focus+label {
+            outline: none;
+            border-color: #007bff;
+        }
+        /* message section */
+        
+        .message-input {
+            padding: 50px 170px;
+            border-radius: 5px;
+        }
+        
+        .message-label {
+            margin-right: 415px;
+        }
+        /* General Label Reset */
+        
+        label {
+            display: block;
+            font-size: 0.8rem;
+        }
+        /* checkbox section */
+        
+        .checker {
+            /* margin-right: 200px; */
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        /* Button section */
+        
+        .btn {
+            display: block;
+            padding: 10px 230px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #008f68;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #007357;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" id="form-section">
+        <h3>Contact Us</h3>
+
+        <div class="name-section form-group">
+
+            <!-- first name -->
+            <div class="name-content ">
+                <label for="first-name" class="label-name">First Name *</label>
+                <br>
+                <input type="text" id="first-name" class="input-name">
+                <span id="firstNameError" class="error"></span>
+            </div>
+
+            <!-- last name -->
+            <div class="name-content">
+                <label for="last-name" class="label-name">last Name *</label>
+                <br>
+                <input type="text" id="last-name" class="input-name">
+                <span id="lastNameError" class="error"></span>
+            </div>
+
+        </div>
+
+        <!-- email -->
+        <div class="email-address form-group">
+            <label for="emailAddress" class="label-address">Email Address *</label>
+            <br>
+            <input type="text" id="emailAddress" class="emailAddress">
+            <span id="emailError" class="error"></span>
+        </div>
+
+        <!-- query type -->
+        <div class="queryType form-group">
+            <label for="" class="query-type">Query Type *</label>
+            <div class="queryType-container">
+                <div class="radio-container">
+                    <label>
+                        <input type="radio" id="generalEnquiry" name="query" value="general" >
+                        General Enquiry
+                    </label>
+                    <span id="generalError" class="error"></span>
+                </div>
+                <div class="radio-container">
+                    <label>
+                        <input type="radio" id="supportRequest" name="query" value="support">
+                        Support Request
+                    </label>
+                    <span id="supportError" class="error"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- message -->
+        <div class=" footer form-group">
+            <div class="message ">
+                <label for="message" class="message-label">Message *</label>
+                <br>
+                <input type="message " id="message" class="message-input">
+                <span id="messageError" class="error"></span>
+            </div>
+
+            <!-- checkbox section -->
+            <div class="checker form-group">
+                <input type="checkbox" id="checkBox ">
+                <label for="checkbox " class="checker-label">I consent being contacted by the team *</label>
+                <span id="checkboxError" class="error"></span>
+            </div>
+
+            <!-- submit button -->
+            <div class="submit form-group">
+                <button type="submit" class="btn">submit</button>
+            </div>
+        </div>
+
+    </form>
+    <script src="./contacForm.js"></script>
+</body>
+
+</html>
